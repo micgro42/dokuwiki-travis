@@ -34,7 +34,7 @@ rm -rf .travis.yml
 # move everything to the correct location
 echo ">MOVING TO: lib/plugins/$BASE"
 mkdir -p lib/plugins/$BASE
-mv {*,.*} lib/plugins/$BASE/ 2>/dev/null
+mv {*,.*} lib/plugins/$BASE/
 
 ls -al
 ls -al lib/plugins/$BASE
