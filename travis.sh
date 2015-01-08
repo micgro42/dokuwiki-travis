@@ -25,16 +25,13 @@ if [ -z "$BASE" ]; then
     exit 1
 fi
 
-# move everything to the correct location
-echo ">MOVING TO: lib/plugins/$BASE"
-mkdir -p lib/plugins/$BASE
-mv * lib/plugins/$BASE/ 2>/dev/null
-
 # remove current .git
 rm -rf .git
 
-# remove own travis config to make room for DokuWiki's                                                                  
-rm -rf .travis.yml 
+# move everything to the correct location
+echo ">MOVING TO: lib/plugins/$BASE"
+mkdir -p lib/plugins/$BASE
+mv {*,.*} lib/plugins/$BASE/ 2>/dev/null
 
 # checkout DokuWiki into current directory (no clone because dir isn't empty)
 # the branch is specified in the $DOKUWIKI environment variable
