@@ -36,6 +36,9 @@ echo ">MOVING TO: lib/plugins/$BASE"
 mkdir -p lib/plugins/$BASE
 mv {*,.*} lib/plugins/$BASE/ 2>/dev/null
 
+ls -al
+ls -al lib/plugins/$BASE
+
 # checkout DokuWiki into current directory (no clone because dir isn't empty)
 # the branch is specified in the $DOKUWIKI environment variable
 echo ">CLONING DOKUWIKI: $DOKUWIKI"
