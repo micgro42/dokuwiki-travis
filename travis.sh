@@ -28,6 +28,9 @@ fi
 # remove current .git
 rm -rf .git
 
+# remove own travis config to make room for DokuWiki's                                                                  
+rm -rf .travis.yml 
+
 # move everything to the correct location
 echo ">MOVING TO: lib/plugins/$BASE"
 mkdir -p lib/plugins/$BASE
